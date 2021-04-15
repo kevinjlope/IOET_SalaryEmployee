@@ -25,4 +25,7 @@ export class Empleado{
         })
         this.setSaldo(pagoHoraHorario);
     }
+    mostrarInfo(){
+        return `${this.nombre} tiene un saldo de: $${this.saldo}`
+    }
 }

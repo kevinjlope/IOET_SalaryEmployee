@@ -18,6 +18,7 @@ export async function leerArchivo(){
 }
 
 function separarArchivo(string){
+    console.log(`***********Salida por consola********** \n***********Salarios por empleado******** \n` )
     let arrayLinea = string.split("\n")
     //console.log(arrayLinea)
     arrayLinea.forEach(linea => {
@@ -30,6 +31,7 @@ function separarArchivo(string){
         separarHorariosWork(horarioswork, empleado);
     })
     //console.log(empleados)
+    
     
 }
 
@@ -48,7 +50,7 @@ function separarHorariosWork(horarios,empleado){
         saldoEmpleado += forHorarioEmpleado.getPago();
     })
     empleado.setSaldo(saldoEmpleado)
-    
+    console.log(empleado.mostrarInfo())
 }
 
 function pagoHoraHorario(horario){
@@ -86,18 +88,17 @@ export function manipularDOM(){
 }
 
 function mostrarBotones(e){
-   // contenedorEmpleado.clear();
-    e.preventDefault();
+    //e.preventDefault();
     limpiarHTML();
     let totalSaldoAll = 0;
     //console.log("Hola Mundo")
     empleados.forEach(empleado => {
-        console.log(empleado)
+        //console.log(empleado)
         let article = document.createElement("article");
         article.innerHTML = `
             <h2> Nombre: ${empleado.nombre} </h2>
             <p class = "parrafo">Horario: ${empleado.horario}</p>
-            <h2> Saldo: ${empleado.saldo} </h2>
+            <h2> Saldo: $${empleado.saldo} </h2>
         `
         article.className = "articleEmpleado"
         contenedorEmpleado.appendChild(article);

@@ -86,17 +86,14 @@ export function manipularDOM(){
 }
 
 function mostrarBotones(e){
+   // contenedorEmpleado.clear();
     e.preventDefault();
+    limpiarHTML();
     let totalSaldoAll = 0;
     console.log("Hola Mundo")
     empleados.forEach(empleado => {
         console.log(empleado)
-        // let h3 = document.createElement("h3");
-        // h3.textContent = empleado.nombre;
-        // contenedorEmpleado.appendChild(h3);
         let article = document.createElement("article");
-       // article.textContent = empleado.nombre;
-        //let ui = new UI(empleado);
         article.innerHTML = `
             <h2> Nombre: ${empleado.nombre} </h2>
             <p class = "parrafo">Horario: ${empleado.horario}</p>
@@ -107,4 +104,10 @@ function mostrarBotones(e){
         totalSaldoAll += empleado.saldo;
     })
     totalUI.textContent = `Total a pagar en esta semana: $ ${totalSaldoAll}`;
+
+}
+function limpiarHTML() {
+    while(contenedorEmpleado.firstChild) {
+        contenedorEmpleado.removeChild(contenedorEmpleado.firstChild);
+    }
 }

@@ -90,7 +90,7 @@ function mostrarBotones(e){
     e.preventDefault();
     limpiarHTML();
     let totalSaldoAll = 0;
-    console.log("Hola Mundo")
+    //console.log("Hola Mundo")
     empleados.forEach(empleado => {
         console.log(empleado)
         let article = document.createElement("article");

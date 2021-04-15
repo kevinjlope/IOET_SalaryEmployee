@@ -5,7 +5,7 @@
 
 ## Requerimientos
 - Install **live server** in **visual studio code**
-
+![](https://4.bp.blogspot.com/-jRfvd87q8jc/XCuQ36ndVdI/AAAAAAAAAoo/8f-RlBnMItcSRTCn35sobmB2cA9Dd9nnQCLcBGAs/s1600/vscode-install-live-server.png)
 ## Run
 - Open of project in visual studio code
 - Click right and select **open with live server**
@@ -14,13 +14,13 @@
 - if click in the bottom **Consultar** employee information is added to the window.
 ![](https://imgur.com/A7vyWoW.png)
 
-##Code of Project
-###Folder JS
+## Code of Project
+### Folder JS
 - There are many file **.js** because is easier understand code to sections. In comparation of have a file with hundreds of lineas code
 - The file app.js is the main of the aplication, without this file the application not runner.
 - The folder **Clases** there are two file **Empleado.js** and **Horario.js** in both file the structure of code is OPP (Object oriented programming).
 - There are other file **.js** the file **funciones.js** is used as file second main, in this file import class and variables, for your runner.
 - In the file **app.js** to declare un array, that contained objects of type **Empleado** to handle the information.
 
-###Folder data
+### Folder data
 - The file data.txt is located in this folder. This file is used with information of each the employee.

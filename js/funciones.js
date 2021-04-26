@@ -65,11 +65,11 @@ function pagoHoraHorario(horario){
         //console.log(x,y,a,b)
         if(isRango(x,y,a,b)){
             //d1 = Math.abs(x-y);
-            let d1 = Math.abs(a-b)/3600000;
+            let numeroHoras = Math.abs(a-b)/3600000;
             if(horario.isWeekend()){
-                pagaHorario = (pago+5)*d1;
+                pagaHorario = (pago+5)*numeroHoras;
             }else{
-                pagaHorario = pago*d1;
+                pagaHorario = pago*numeroHoras;
             }
         }
     })
@@ -84,11 +84,12 @@ function isRango(x,y,a,b){
     }
 }
 export function manipularDOM(){
-    btnConsultar.addEventListener("click", mostrarBotones)
+    btnConsultar.addEventListener("click", mostrarInfo)
 }
 
-function mostrarBotones(e){
-    //e.preventDefault();
+function mostrarInfo(e){
+    e.preventDefault();
+    console.log(e.target);
     limpiarHTML();
     let totalSaldoAll = 0;
     //console.log("Hola Mundo")
@@ -105,6 +106,10 @@ function mostrarBotones(e){
         totalSaldoAll += empleado.saldo;
     })
     totalUI.textContent = `Total a pagar en esta semana: $ ${totalSaldoAll}`;
+    // const btnLimpiar = document.createElement('a');
+    // btnLimpiar.textContent = 'Limpiar';
+    // btnLimpiar.classList.add('limpiar')
+    // e.target.parentElement.appendChild(btnLimpiar)
 
 }
 function limpiarHTML() {

@@ -10,3 +10,4 @@ export const btnConsultar = document.querySelector("#btnConsultar")
 export const contenedorEmpleado = document.querySelector("#contenedor-empleado")
 export const totalUI = document.querySelector(".total");
 export const parrafoUI = document.querySelector(".parrafo");
+export const contenedorPrincipal = document.querySelector('.contenedor-consulta');
